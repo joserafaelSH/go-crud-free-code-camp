@@ -1,0 +1,44 @@
+### Variables 
+@BASE_URL = http://localhost:8080
+
+### GET ping
+GET {{BASE_URL}}/ping
+
+
+### GET movies
+GET {{BASE_URL}}/movies
+
+
+### GET movie
+GET {{BASE_URL}}/movies/3
+
+
+### DELETE movie
+DELETE  {{BASE_URL}}/movies/3
+
+### POST movie
+POST  {{BASE_URL}}/movies
+content-type: application/json
+
+{
+    "title": "The Matrix",
+    "isbn": "123",
+    "director": {
+        "firstname": "Lana",
+        "lastname": "Wachowski"
+    }
+}
+
+
+### PUT movie
+PUT  {{BASE_URL}}/movies/3
+content-type: application/json
+
+{
+    "title": "The Matrix - updated",
+    "isbn": "123 - updated",
+    "director": {
+        "firstname": "Lana - updated",
+        "lastname": "Wachowski - updated"
+    }
+}
